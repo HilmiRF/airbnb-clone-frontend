@@ -37,7 +37,7 @@ const SignInForm = () => {
 		await mutateAsync(data, {
 			onSuccess: (result) => {
 				if (result.error) setErrorMessage(result.error);
-				else router.push("/dashboard/hello");
+				else router.push("/dashboard/property");
 			},
 			onError: () => setErrorMessage("Internal server error"),
 		});

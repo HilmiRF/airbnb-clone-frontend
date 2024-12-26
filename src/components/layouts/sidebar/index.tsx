@@ -1,12 +1,11 @@
 "use client";
 
 import SidebarComponent from "@/components/organisms/SidebarComponent";
-import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import React, { FC } from "react";
 import { AiOutlineHome, AiOutlineMessage } from "react-icons/ai";
-import { BsBriefcase, BsBuildings, BsCalendar4, BsGear } from "react-icons/bs";
-import { FiLogOut, FiUsers } from "react-icons/fi";
+import { BsGear } from "react-icons/bs";
+import { FiLogOut, FiUsers, FiBookOpen } from "react-icons/fi";
 
 interface SidebarProps {}
 
@@ -25,39 +24,25 @@ const Sidebar: FC<SidebarProps> = ({}) => {
 							onClick={() => {}}
 							className="w-full justify-start rounded-none hover:text-primary"
 						>
-							<AiOutlineHome className="mr-2 text-lg" /> Home
+							<AiOutlineHome className="mr-2 text-lg" /> Property
 						</SidebarComponent>
 						<SidebarComponent
 							className="w-full justify-start rounded-none hover:text-primary"
 							onClick={() => {}}
 						>
-							<AiOutlineMessage className="mr-2 text-lg" />{" "}
-							Messages
+							<AiOutlineMessage className="mr-2 text-lg" /> Review
 						</SidebarComponent>
 						<SidebarComponent
 							className="w-full justify-start rounded-none hover:text-primary"
 							onClick={() => {}}
 						>
-							<BsBuildings className="mr-2 text-lg" /> Company
-							Profile
+							<FiBookOpen className="mr-2 text-lg" /> Booking
 						</SidebarComponent>
 						<SidebarComponent
 							className="w-full justify-start rounded-none hover:text-primary"
 							onClick={() => {}}
 						>
-							<FiUsers className="mr-2 text-lg" /> All Applicant
-						</SidebarComponent>
-						<SidebarComponent
-							className="w-full justify-start rounded-none hover:text-primary"
-							onClick={() => {}}
-						>
-							<BsBriefcase className="mr-2 text-lg" /> Job Listing
-						</SidebarComponent>
-						<SidebarComponent
-							className="w-full justify-start rounded-none hover:text-primary"
-							onClick={() => {}}
-						>
-							<BsCalendar4 className="mr-2 text-lg" /> My Schedule
+							<FiUsers className="mr-2 text-lg" /> User
 						</SidebarComponent>
 					</div>
 				</div>

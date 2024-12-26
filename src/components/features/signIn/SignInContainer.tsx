@@ -4,9 +4,6 @@ const SignInContainer = () => {
 	return (
 		<main className="flex h-screen w-full items-center justify-center">
 			<div className="flex flex-col items-center">
-				<div className="flex gap-3">
-					<h2 className="mb-8 text-h2 font-bold">Dashboard AirBnB</h2>
-				</div>
 				<div className="dark:bg-custom-dark-card flex w-[473px] flex-col items-center gap-4 rounded-2xl p-10 shadow-sm">
 					<h2 className="text-h2 font-bold">Sign In</h2>
 					<div className="w-full">
