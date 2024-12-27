@@ -33,6 +33,16 @@ export const handleSignIn = async (request: {
 				}
 			);
 
+			cookies().set(
+				"username",
+				signInResponse.output_schema.data.user.username,
+				{
+					httpOnly: true,
+					maxAge: 9 * 60 * 60,
+					sameSite: "strict",
+				}
+			);
+
 			return { data: signInResponse.output_schema.data };
 		})
 		.catch((error: AxiosError) => {

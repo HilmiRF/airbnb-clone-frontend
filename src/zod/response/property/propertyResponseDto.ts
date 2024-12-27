@@ -4,7 +4,7 @@ export const PropertyResponseSchema = z.object({
 	id: z.string(),
 	title: z.string(),
 	description: z.string(),
-	price_per_night: z.string(),
+	pricePerNight: z.number(),
 	location: z.string(),
-	host_id: z.string(),
+	hostId: z.string(),
 });

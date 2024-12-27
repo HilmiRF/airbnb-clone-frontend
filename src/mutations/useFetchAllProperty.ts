@@ -1,8 +1,9 @@
 import { fetchAllProperty } from "@/actions/propertyAction";
-import { useMutation } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 
 export const useFetchAllProperty = () => {
-	return useMutation({
-		mutationFn: () => fetchAllProperty(),
+	return useQuery({
+		queryKey: ["properties"],
+		queryFn: async () => await fetchAllProperty(),
 	});
 };
