@@ -3,16 +3,13 @@ import React, { FC } from "react";
 import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
 import { z } from "zod";
-import {
-	PropertiesResponseSchema,
-	PropertyResponseSchema,
-} from "@/zod/response/property/propertyResponseDto";
+import { PropertyResponseSchema } from "@/zod/response/property/propertyResponseDto";
 import PropertyItem from "./PropertyItem";
 
 const PropertyList = ({
 	data,
 }: {
-	data: z.infer<typeof PropertiesResponseSchema>;
+	data: z.infer<typeof PropertyResponseSchema>[];
 }) => {
 	console.log(data.length);
 
