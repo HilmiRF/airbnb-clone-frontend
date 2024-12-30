@@ -11,19 +11,18 @@ const PropertyList = ({
 }: {
 	data: z.infer<typeof PropertyResponseSchema>[];
 }) => {
-	console.log(data.length);
-
 	{
 		if (data.length === 0) {
 			return <div>No Property found</div>;
 		}
 		return (
-			<div className="flex flex-row gap-9 py-3">
+			<div className="grid grid-cols-4 gap-9 py-3">
 				{data.map((property, index) => (
 					<PropertyItem
 						title={property.title}
 						pricePerNight={property.pricePerNight}
 						description={property.description}
+						image={property.imageUrl}
 						key={`property-${index}`}
 					/>
 				))}

@@ -7,4 +7,5 @@ export const PropertyResponseSchema = z.object({
 	pricePerNight: z.number(),
 	location: z.string(),
 	hostId: z.string(),
+	imageUrl: z.string(),
 });

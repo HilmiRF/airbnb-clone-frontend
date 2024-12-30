@@ -21,26 +21,32 @@ const Sidebar: FC<SidebarProps> = ({}) => {
 					</h2>
 					<div className="space-y-3">
 						<SidebarComponent
-							onClick={() => {}}
+							onClick={() =>
+								router.push("/dashboard/home/property")
+							}
 							className="w-full justify-start rounded-none hover:text-primary"
 						>
 							<AiOutlineHome className="mr-2 text-lg" /> Property
 						</SidebarComponent>
 						<SidebarComponent
 							className="w-full justify-start rounded-none hover:text-primary"
-							onClick={() => {}}
+							onClick={() =>
+								router.push("/dashboard/home/review")
+							}
 						>
 							<AiOutlineMessage className="mr-2 text-lg" /> Review
 						</SidebarComponent>
 						<SidebarComponent
 							className="w-full justify-start rounded-none hover:text-primary"
-							onClick={() => {}}
+							onClick={() =>
+								router.push("/dashboard/home/booking")
+							}
 						>
 							<FiBookOpen className="mr-2 text-lg" /> Booking
 						</SidebarComponent>
 						<SidebarComponent
 							className="w-full justify-start rounded-none hover:text-primary"
-							onClick={() => {}}
+							onClick={() => router.push("/dashboard/home/user")}
 						>
 							<FiUsers className="mr-2 text-lg" /> User
 						</SidebarComponent>
@@ -52,12 +58,6 @@ const Sidebar: FC<SidebarProps> = ({}) => {
 							Settings
 						</h2>
 						<div className="space-y-3">
-							<SidebarComponent
-								className="w-full justify-start rounded-none hover:text-primary"
-								onClick={() => {}}
-							>
-								<BsGear className="mr-2 text-lg" /> Settings
-							</SidebarComponent>
 							<SidebarComponent
 								className="w-full justify-start rounded-none hover:text-red-500 hover:bg-red-200"
 								onClick={() => router.push("/dashboard/signin")}

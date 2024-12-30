@@ -7,7 +7,6 @@ interface PropertyContainerProps {}
 
 const PropertyContainer: FC<PropertyContainerProps> = ({}) => {
 	const { data, error, isLoading } = useFetchAllProperty();
-	console.log(`${data} hehe`);
 
 	return (
 		<main className="h-full w-full pb-10">

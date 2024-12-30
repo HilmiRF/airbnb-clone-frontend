@@ -6,20 +6,20 @@ type PropertyItemProps = {
 	title: string;
 	pricePerNight: Number;
 	description: string;
+	image: string;
 };
 
 const PropertyItem: FC<PropertyItemProps> = ({
 	title,
 	pricePerNight,
 	description,
+	image,
 }) => {
 	return (
-		<div className="flex flex-col lg:col-span-2 w-[25%] max-w-[25%]">
+		<div className="w-full">
 			<Image
-				className="rounded-xl w-full"
-				src={
-					"https://ftwncsityajgsgljlhko.supabase.co/storage/v1/object/public/images/3ebbc96f-c00f-4030-8c97-f51e71f75587-airbnb-property-1.jpg"
-				}
+				className="rounded-xl w-full aspect-w-1 aspect-h-1"
+				src={image}
 				alt={""}
 				width={302}
 				height={286}
@@ -34,7 +34,6 @@ const PropertyItem: FC<PropertyItemProps> = ({
 				</div>
 			</div>
 			<div className="text-[#5E5E5E]">{description}</div>
-			<div className="text-[#5E5E5E]">Oct 23-28</div>
 			<div className="font-semibold text-[#222222]">
 				{pricePerNight.toString()}$ night
 			</div>
