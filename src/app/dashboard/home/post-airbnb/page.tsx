@@ -15,6 +15,7 @@ import { usePostProperty } from "@/mutations/usePostProperty";
 import { PropertyRequestSchema } from "@/zod/request/property/propertyRequestDto";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ArrowLeftIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
 import React, { FC, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -22,6 +23,7 @@ import { z } from "zod";
 interface PostAirbnbPageProps {}
 
 const PostAirbnbPage: FC<PostAirbnbPageProps> = ({}) => {
+	const router = useRouter();
 	const form = useForm<z.infer<typeof PropertyRequestSchema>>({
 		resolver: zodResolver(PropertyRequestSchema),
 	});
@@ -54,12 +56,10 @@ const PostAirbnbPage: FC<PostAirbnbPageProps> = ({}) => {
 				jsonBlob,
 				"propertyRequestDto.json"
 			);
-			for (const [key, value] of formData.entries()) {
-				console.log(`${key}:`, value);
-			}
 			postPropertyMutation.mutate(formData, {
 				onSuccess: (data) => {
 					console.log("Upload Successful", data);
+					router.push("/dashboard/home/property");
 				},
 				onError: (error) => {
 					console.log("Upload Failed", error.message);
@@ -225,7 +225,7 @@ const PostAirbnbPage: FC<PostAirbnbPageProps> = ({}) => {
 					</FieldInput>
 
 					<div className="flex justify-end">
-						<Button size="lg">Do a Review</Button>
+						<Button size="lg">Post Airbnb</Button>
 					</div>
 				</form>
 			</Form>

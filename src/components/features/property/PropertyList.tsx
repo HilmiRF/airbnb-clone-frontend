@@ -23,7 +23,9 @@ const PropertyList = ({
 						pricePerNight={property.pricePerNight}
 						description={property.description}
 						image={property.imageUrl}
+						propertyId={property.id}
 						key={`property-${index}`}
+						// add onClick feature to detail property
 					/>
 				))}
 			</div>
