@@ -34,11 +34,11 @@ const PropertyDetailContainer = ({ propertyId }: { propertyId: string }) => {
 	const form = useForm<z.infer<typeof PropertyRequestSchema>>({
 		resolver: zodResolver(PropertyRequestSchema),
 		defaultValues: {
-			title: data?.title,
-			description: data?.description,
-			host_id: data?.hostId,
-			location: data?.location,
-			price_per_night: data?.pricePerNight,
+			title: data.title,
+			description: data.description,
+			host_id: data.hostId,
+			location: data.location,
+			price_per_night: data.pricePerNight,
 		},
 	});
 
